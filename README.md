@@ -15,7 +15,8 @@ bun run dev
 
 - Public introduction and positioning
 - Curriculum roadmap
-- First lesson: the scientific method for agentic engineering
+- Eleven-lesson Raspberry Pi → agent → portfolio pathway
+- Instructor/about page
 - Static hosting; no student accounts or agent integrations yet
 
 See [`docs/vision.md`](docs/vision.md), [`docs/plan.md`](docs/plan.md), and [`docs/deployment.md`](docs/deployment.md) for the product direction and launch notes.

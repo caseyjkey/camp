@@ -1,5 +1,6 @@
 ---
 const { title = 'Key Camp', description = 'AI fluency and creative problem-solving for young people.' } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://camp.keycasey.com');
 ---
 <!doctype html>
 <html lang="en">
@@ -7,6 +8,15 @@ const { title = 'Key Camp', description = 'AI fluency and creative problem-solvi
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#101311" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} · Key Camp`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={`${title} · Key Camp`} />
+    <meta name="twitter:description" content={description} />
     <title>{title} · Key Camp</title>
   </head>
   <body>
@@ -14,6 +24,7 @@ const { title = 'Key Camp', description = 'AI fluency and creative problem-solvi
       <a class="wordmark" href="/">KEY CAMP<span>_</span></a>
       <nav aria-label="Main navigation">
         <a href="/lessons/">Lessons</a>
+        <a href="/about/">About</a>
         <a href="#why">Why Key Camp</a>
       </nav>
     </header>

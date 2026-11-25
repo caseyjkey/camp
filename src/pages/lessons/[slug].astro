@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { lessons } from '../../data/lessons';
+
+export function getStaticPaths() {
+  return lessons.map((lesson) => ({ params: { slug: lesson.slug }, props: { lesson } }));
+}
+
+const { lesson } = Astro.props;
+---
+<BaseLayout title={lesson.title} description={lesson.description}>
+  <article class="lesson wrap">
+    <a class="back-link" href="/lessons/">← All lessons</a>
+    <p class="eyebrow">Lesson {lesson.number} · Agentic engineering</p>
+    <h1>{lesson.title}</h1>
+    <p class="lede">{lesson.description}</p>
+
+    <div class="lesson-grid">
+      <section>
+        <h2>Mission</h2>
+        <p>{lesson.mission}</p>
+        <h2>Why it matters</h2>
+        <p>{lesson.why}</p>
+      </section>
+      <aside class="success-card">
+        <p class="eyebrow">Success looks like</p>
+        <ul>{lesson.success.map((item) => <li>{item}</li>)}</ul>
+      </aside>
+    </div>
+
+    <section class="steps">
+      <p class="eyebrow">Try it</p>
+      <ol>{lesson.steps.map((step) => <li>{step}</li>)}</ol>
+    </section>
+
+    <aside class="issue-card"><strong>Issue to watch for:</strong> {lesson.issue}</aside>
+    <section class="reflection"><p class="eyebrow">Reflect</p><p>{lesson.reflection}</p></section>
+    <a class="next-link" href="/lessons/">Return to the curriculum →</a>
+  </article>
+</BaseLayout>
+
+<style>
+  .wrap { max-width: 980px; margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+  .back-link, .next-link { color: var(--muted); text-underline-offset: .3rem; }
+  .back-link:hover, .back-link:focus-visible, .next-link:hover, .next-link:focus-visible { color: var(--lime); }
+  .eyebrow { color: var(--lime); font: 500 .72rem 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; }
+  h1 { max-width: 850px; margin: 1rem 0; font-size: clamp(3rem, 8vw, 7rem); line-height: .92; letter-spacing: -.07em; }
+  .lede { max-width: 650px; color: var(--muted); font-size: 1.3rem; }
+  .lesson-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, .8fr); gap: 3rem; margin-top: 4rem; }
+  h2 { margin-top: 2rem; font-size: 2rem; letter-spacing: -.04em; } h2:first-child { margin-top: 0; }
+  p { color: var(--muted); } .success-card, .issue-card, .reflection { padding: 1.5rem; background: var(--panel); border: 1px solid var(--line); }
+  .success-card ul { padding-left: 1.1rem; } li { margin: .7rem 0; color: var(--muted); } .success-card li::marker { color: var(--lime); }
+  .steps { margin-top: 4rem; border-top: 1px solid var(--line); padding-top: 2rem; } .steps ol { padding-left: 1.5rem; } .steps li { padding-left: .5rem; }
+  .issue-card { margin-top: 3rem; border-left: 3px solid var(--orange); } .issue-card strong { color: var(--orange); }
+  .reflection { margin-top: 3rem; } .reflection p:last-child { margin-bottom: 0; color: var(--ink); font-size: 1.25rem; }
+  .next-link { display: inline-block; margin-top: 3rem; }
+  @media (max-width: 700px) { .wrap { padding-top: 2rem; } .lesson-grid { grid-template-columns: 1fr; gap: 1rem; margin-top: 3rem; } h1 { font-size: clamp(2.8rem, 14vw, 5rem); } }
+</style>

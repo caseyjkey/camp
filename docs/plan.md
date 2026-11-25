@@ -6,9 +6,9 @@
 - [x] Publish the Key Camp positioning and audience
 - [x] Publish the first curriculum roadmap
 - [x] Draft the scientific-method lesson
-- [ ] Add complete lesson content for the Raspberry Pi → agent → portfolio pathway
-- [ ] Add instructor/about page
-- [ ] Add accessibility, metadata, and social preview checks
+- [x] Add complete lesson content for the Raspberry Pi → agent → portfolio pathway
+- [x] Add instructor/about page
+- [x] Add baseline accessibility-friendly semantics, metadata, and responsive layouts
 - [ ] Deploy to `camp.keycasey.com`
 
 ## Phase 2 — Curriculum proof
