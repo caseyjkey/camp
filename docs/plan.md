@@ -1,6 +1,6 @@
 # Implementation plan
 
-## Phase 1 — Static curriculum site
+## Phase 1: Static curriculum site
 
 - [x] Create the standalone Astro repository
 - [x] Publish the Key Camp positioning and audience

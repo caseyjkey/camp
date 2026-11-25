@@ -1,6 +1,6 @@
 # Key Camp
 
-Key Camp is an AI fluency and creative problem-solving program for young people. Students build a computing environment, configure an AI agent, and use it to turn their own ideas into working projects.
+Key Camp is a hands-on AI camp for young people. Students build a small computing environment, set up an AI agent, and use it to make a project they care about.
 
 The first public site is a static Astro curriculum site at [camp.keycasey.com](https://camp.keycasey.com).
 

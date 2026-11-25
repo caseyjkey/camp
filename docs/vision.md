@@ -2,15 +2,15 @@
 
 ## Purpose
 
-Key Camp expands who gets to create with AI—not just who gets trained to code it.
+Key Camp gives more young people a chance to create with AI.
 
-It is an AI fluency and creative problem-solving program for grades 3–12. Students use agents as tools to make useful, meaningful projects connected to their own interests: construction, art, music, local business, cultural preservation, community organizing, science, entrepreneurship, or computer science.
+It is a project-based program for grades 3–12. Students use agents to make things connected to their own interests: construction, art, music, local business, cultural preservation, community organizing, science, entrepreneurship, or computer science.
 
 ## Equity commitment
 
 The program is grounded in Casey's experience growing up low-income and Native American. Its intended early communities are rural Indigenous communities and inner-city youth who are often excluded from expensive model subscriptions, advanced technology programs, and the emerging AI economy.
 
-The course should be culturally responsive, practical, affordable, and usable in low-bandwidth environments. It should treat students as creators with valuable context—not as empty vessels to be trained for an existing industry.
+The course should be practical, affordable, and usable in low-bandwidth environments. Students bring valuable knowledge and context. The course should build on that instead of treating them like blank slates.
 
 ## Learning philosophy
 
@@ -35,4 +35,4 @@ The portfolio is a vehicle for learning, not the limit of the program.
 
 ## Long-term ambition
 
-Key Camp can grow from a traveling workshop into an AI education publisher and platform: teacher-ready curriculum, community-specific pathways, assessments, managed student environments, and project portfolios. The first site should prove the learning model with one clear, excellent pathway before adding accounts or live agent integrations.
+Key Camp can grow from a traveling workshop into an education publisher and platform. That could include teacher-ready curriculum, community-specific pathways, assessments, managed student environments, and project portfolios. First, the site needs to prove that the learning model works.

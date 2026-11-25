@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { lessons } from '../../data/lessons';
 ---
 <BaseLayout title="Lessons" description="Key Camp lessons for building with AI agents.">
-  <section class="intro wrap"><p class="eyebrow">The curriculum</p><h1>Make. Test.<br /><em>Keep going.</em></h1><p>Each lesson gives you a mission, a working environment, and a result you can show to someone else.</p></section>
+  <section class="intro wrap"><p class="eyebrow">The curriculum</p><h1>Start with the machine.<br /><em>End with your idea.</em></h1><p>Each lesson gives you one job to do, one result to check, and one thing you can show someone else.</p></section>
   <section class="lesson-list wrap" aria-label="Lessons">{lessons.map((lesson) => <a class="lesson" href={`/lessons/${lesson.slug}/`}><span class="number">{lesson.number}</span><span><h2>{lesson.title}</h2><p>{lesson.description}</p></span><span class="arrow">↗</span></a>)}</section>
 </BaseLayout>
 <style>
