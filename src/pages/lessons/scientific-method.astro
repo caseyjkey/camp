@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="The scientific method for agentic engineering" description="A Key Camp lesson about testing, feedback, and improving work made with AI agents.">
+  <article class="lesson wrap">
+    <p class="eyebrow">Lesson 01 · Working with agents</p>
+    <h1>The scientific method for <em>agentic engineering</em></h1>
+    <p class="lede">An agent can make a change quickly. Your job is to figure out whether the change actually works.</p>
+    <div class="loop" aria-label="The Key Camp process"><span>Question</span><b>→</b><span>Plan</span><b>→</b><span>Build</span><b>→</b><span>Test</span><b>→</b><span>Share &amp; feedback</span><b>→</b><span>Interpret</span><b>→</b><span>Improve</span></div>
+    <h2>Mission</h2><p>Take a small project idea and make a claim about what it should accomplish. Work with an agent to build it. Test it yourself, share it with another person, and use the evidence to decide what to change next.</p>
+    <h2>What counts as success?</h2><ul><li>You can state what you wanted the project to do.</li><li>You can show how you tested it.</li><li>You can identify a failure or piece of feedback.</li><li>You can explain why your next change is a good experiment.</li></ul>
+    <aside><strong>Remember:</strong> “Agent, fix it” is not a diagnosis. Tell the agent what happened, what evidence you have, and what change you want to test.</aside>
+  </article>
+</BaseLayout>
+<style>
+  .wrap { max-width: 900px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; } .lesson { padding-top: clamp(4rem, 10vw, 8rem); } .eyebrow { color: var(--lime); font: 500 .72rem 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; } h1 { max-width: 800px; margin: 1rem 0; font-size: clamp(3rem, 8vw, 7rem); line-height: .92; letter-spacing: -.07em; } h1 em { color: var(--orange); font-style: normal; } .lede { color: var(--muted); font-size: 1.3rem; max-width: 600px; } .loop { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin: 4rem 0; padding: 1.25rem; border: 1px solid var(--line); background: var(--panel); font: .8rem 'DM Mono', monospace; } .loop span { color: var(--lime); } .loop b { color: var(--muted); font-weight: normal; } h2 { margin-top: 3rem; font-size: 2rem; letter-spacing: -.04em; } li { margin: .6rem 0; color: var(--muted); } aside { margin-top: 3rem; padding: 1.25rem; border-left: 3px solid var(--orange); background: var(--panel); } aside strong { color: var(--orange); } @media (max-width: 600px) { .loop { line-height: 1.8; } }
+</style>

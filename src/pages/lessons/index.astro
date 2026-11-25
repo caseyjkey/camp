@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const lessons = [{ number: '01', title: 'The scientific method for agentic engineering', description: 'Learn how to turn an idea, evidence, and feedback into the next better version.', href: '/lessons/scientific-method/' }, { number: '02', title: 'Your first digital headquarters', description: 'Coming next: define a portfolio project that reflects what you care about.', href: '#' }, { number: '03', title: 'Build the agent environment', description: 'Coming next: Raspberry Pi, secure access, and a workspace for your agent.', href: '#' }];
+---
+<BaseLayout title="Lessons" description="Key Camp lessons for building with AI agents.">
+  <section class="intro wrap"><p class="eyebrow">The curriculum</p><h1>Make. Test.<br /><em>Keep going.</em></h1><p>Each lesson gives you a mission, a working environment, and a result you can show to someone else.</p></section>
+  <section class="lesson-list wrap" aria-label="Lessons">{lessons.map((lesson) => <a class:list={['lesson', {disabled: lesson.href === '#'}]} href={lesson.href}><span class="number">{lesson.number}</span><span><h2>{lesson.title}</h2><p>{lesson.description}</p></span><span class="arrow">{lesson.href === '#' ? 'soon' : '↗'}</span></a>)}</section>
+</BaseLayout>
+<style>
+  .wrap { max-width: 1120px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+  .intro { padding-top: clamp(4rem, 10vw, 8rem); padding-bottom: 5rem; }
+  .eyebrow, .number { color: var(--lime); font: 500 .72rem 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; }
+  h1 { margin: 1rem 0; font-size: clamp(3.5rem, 10vw, 8rem); line-height: .9; letter-spacing: -.08em; } h1 em { color: var(--orange); font-style: normal; } .intro p:last-child { max-width: 480px; color: var(--muted); font-size: 1.2rem; }
+  .lesson-list { border-top: 1px solid var(--line); }
+  .lesson { display: grid; grid-template-columns: 5rem 1fr 4rem; gap: 1.5rem; align-items: start; padding: 2rem 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+  .lesson:hover:not(.disabled), .lesson:focus-visible:not(.disabled) { color: var(--lime); } .lesson.disabled { color: var(--muted); cursor: default; } .lesson h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.5rem); letter-spacing: -.04em; } .lesson p { margin-bottom: 0; color: var(--muted); } .arrow { color: var(--lime); font: .75rem 'DM Mono', monospace; text-align: right; }
+  @media (max-width: 600px) { .lesson { grid-template-columns: 3rem 1fr; } .arrow { grid-column: 2; text-align: left; } }
+</style>

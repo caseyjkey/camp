@@ -1,0 +1,42 @@
+---
+const { title = 'Key Camp', description = 'AI fluency and creative problem-solving for young people.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title} · Key Camp</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="/">KEY CAMP<span>_</span></a>
+      <nav aria-label="Main navigation">
+        <a href="/lessons/">Lessons</a>
+        <a href="#why">Why Key Camp</a>
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">
+      <span>Key Camp</span>
+      <span>Build with curiosity. Test with care.</span>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+  :root { color-scheme: dark; --ink: #f4f0e6; --muted: #a8aaa4; --bg: #101311; --panel: #171c18; --line: #354238; --lime: #c9ee6b; --orange: #ff9b5c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Space Grotesk', system-ui, sans-serif; line-height: 1.5; }
+  a { color: inherit; }
+  .site-header, .site-footer { max-width: 1120px; margin: 0 auto; padding: 1.5rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .site-header { border-bottom: 1px solid var(--line); }
+  .wordmark { font: 500 1rem 'DM Mono', monospace; text-decoration: none; letter-spacing: .08em; }
+  .wordmark span { color: var(--lime); }
+  nav { display: flex; gap: 1.25rem; font-size: .9rem; color: var(--muted); }
+  nav a:hover, nav a:focus-visible { color: var(--lime); }
+  .site-footer { margin-top: 5rem; border-top: 1px solid var(--line); color: var(--muted); font: .75rem 'DM Mono', monospace; }
+  @media (max-width: 600px) { .site-header, .site-footer { align-items: flex-start; flex-direction: column; } nav { gap: 1rem; } }
+</style>
