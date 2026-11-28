@@ -19,4 +19,4 @@ bun run dev
 - Instructor/about page
 - Static hosting; no student accounts or agent integrations yet
 
-See [`docs/vision.md`](docs/vision.md), [`docs/plan.md`](docs/plan.md), and [`docs/deployment.md`](docs/deployment.md) for the product direction and launch notes.
+See the [writing guide](docs/writing-guide.md) for lesson style and review. See [`docs/vision.md`](docs/vision.md), [`docs/plan.md`](docs/plan.md), and [`docs/deployment.md`](docs/deployment.md) for the product direction and launch notes.
